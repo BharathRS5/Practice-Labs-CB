@@ -1,2 +1,4 @@
-FROM alpine
+FROM almalinux
 RUN yum install nginx
+RUN echo "Hello world, Let's begin careating our own Docker images" > /usr/share/nginx/html/hello.html
+CMD [ "nginx", "-g", "daemon off;" ]
