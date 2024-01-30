@@ -2,5 +2,5 @@ FROM almalinux
 LABEL container="nginx"
 EXPOSE 80/tcp
 RUN yum install nginx -y
-COPY Robshop_WebPage/ /usr/share/nginx/html
+COPY Roboshop_WebPage/ /usr/share/nginx/html 
 CMD [ "nginx", "-g", "daemon off;" ]
