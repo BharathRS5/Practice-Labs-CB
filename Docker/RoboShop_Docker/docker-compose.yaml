@@ -31,6 +31,15 @@ services:
     depends_on:
       - mongodb
       - redis
+
+  cart:
+    image: bharathrs5/cart:v1
+    container_name: cart
+    networks:
+      - roboshop
+    depends_on:
+      - redis
+      - catalogue
   
   web:
     image: bharathrs5/web:v1
