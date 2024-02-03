@@ -1,3 +1,46 @@
+networks:
+  roboshop:
+    driver: bridge 
+
 services:
+  mongodb:
+    image: bharathrs5/mongodb:v1
+    container_name: mongodb
+    networks:
+      - roboshop
+
+  catalogue:
+    image: bharathrs5/catalogue:v1
+    container_name: catalogue
+    networks:
+      - roboshop
+    depends_on:
+      - mongodb
+
+  redis:
+    image: redis
+    container_name: redis
+    networks:
+      - roboshop
+
+  user:
+    image: bharathrs5/user:v1
+    container_name: user
+    networks:
+      - roboshop
+    depends_on:
+      - mongodb
+      - redis
+  
   web:
-    image:
+    image: bharathrs5/web:v1
+    container_name: web
+    ports:
+      -"80:80"
+    networks:
+      - roboshop
+    depends_on:
+      - catalogue
+      - user
+
+
