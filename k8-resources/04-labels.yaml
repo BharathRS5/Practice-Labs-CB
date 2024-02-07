@@ -6,8 +6,8 @@ metadata:
   labels:
     env: development
     app: nginx
-
+    
 spec:
   containers:
     - name: nginx-label
-      image: nginx-latest
+      image: nginx:latest
