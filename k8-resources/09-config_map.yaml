@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config-practice
+data:
+  my_name: rsb
+  designation: DevOps engineer
+  company: Cloud Builders
