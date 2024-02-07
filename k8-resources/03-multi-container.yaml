@@ -9,5 +9,7 @@ spec:
       image: nginx:latest
       ports:
        - containerPort: 80
+
     - name: side-car # in the same pod this is another container
       image: alpine:latest
+      command: ["sleep", "200"]
