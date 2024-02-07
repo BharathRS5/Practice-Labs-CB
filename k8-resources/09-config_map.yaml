@@ -2,6 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: config-practice
+  namespace: roboshop
 data:
   my_name: rsb
   designation: DevOps engineer
