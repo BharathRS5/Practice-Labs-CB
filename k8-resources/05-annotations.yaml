@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: annotations
+  namespace: roboshop
+  annotations:
+    com.project.author: bharath
+    com.project.application: nginx
+    
+spec:
+  containers:
+    - name: nginx-label
+      image: nginx:latest
