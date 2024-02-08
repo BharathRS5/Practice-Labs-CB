@@ -5,10 +5,10 @@ metadata:
   namespace: roboshop
 spec:
   containers:
-    - name: nginx-multi   # this is one container 
-      image: nginx:latest
-      ports:
-       - containerPort: 80
+    # - name: nginx-multi   # this is one container 
+    #   image: nginx:latest
+    #   ports:
+    #    - containerPort: 80
 
     - name: side-car # in the same pod this is another container
       image: alpine:latest
