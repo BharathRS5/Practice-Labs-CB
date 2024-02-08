@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  selector:
+    environment: development
+    app: nginx
+  ports:
+  - name: cluster-ip
+    port: 80  # This port is for service
+    targetPort: 80  # This port is of pod
+
