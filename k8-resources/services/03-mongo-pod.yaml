@@ -6,7 +6,3 @@ spec:
   containers:
   - name: mongo-container
     image: mongo
-    resources:
-      limits:
-        memory: "128Mi"
-        cpu: "500m"
